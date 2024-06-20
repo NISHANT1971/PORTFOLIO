@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(45deg,#d2001a,#7462ff,#8cdfa9,#9574d7);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    color: #0b0b0b;
+}
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+    
+}
+
+header {
+    background: #0c0d0d;
+    color: hsl(0, 0%, 100%);
+    padding: 0rem 0;
+    animation: slideDown 0.5s ease-out;
+}
+
+header h1 {
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f4f4f4;
+    text-shadow: 0 0 5px #fff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in;
+    text-align: center;
+    padding: 2rem;
+}
+
+section {
+    padding: 1rem 0;
+    animation: fadeInUp 1s ease-in;
+}
+
+.image{
+    text-align: center;
+    float: center;
+    margin-left: center;
+    margin-top: center;
+    margin-bottom: center;
+    
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(93, 93, 94, 0);
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.project {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: popUp 0.5s ease-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.img{
+    height: 60px;
+}
+.filters {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 0.5s ease-out;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    background: #0c0c0c;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: linear-gradient() #62d2d6,#4CAF50;
+    transform: scale(1.1);
+}
+
+.modal-btn{
+    background-color: rgb(203, 199, 199);
+    color: black;
+    
+}
+
+
+form label {
+    display: block;
+    margin-bottom: px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: #555;
+    transform: translateY(-3px);
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    animation: slideUp 0.5s ease-out;
+}
+
+footer .social-icons a {
+    color: hsl(0, 3%, 6%);
+    margin: 0 20px;
+    text-decoration: solid;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #f4f4f4;
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    animation: animateModal 0.4s;
+}
+
+@keyframes animateModal {
+    from {opacity: 0; transform: scale(0.9);} 
+    to {opacity: 1; transform: scale(1);}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+    from {opacity: 0; transform: translateY(-100%);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(100%);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes popUp {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+
+}
+
+.qualification {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #4CAF50;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qualification:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.qualification h2 {
+    margin-top: 0;
+    color: #333;
+    position: relative;
+    opacity: 0;
+    animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.qualification p {
+    margin: 5px 0;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.qualification p strong {
+    color: #4CAF50;
+}
+
+/* Animation delay for each qualification */
+.qualification:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.qualification:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
